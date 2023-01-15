@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:timeninja/counter/counter.dart';
+import 'package:timeninja/keys.dart';
 import 'package:timeninja/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -10,9 +11,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        appBarTheme: const AppBarTheme(color: Color(0xFF13B9FF)),
+        appBarTheme: const AppBarTheme(color: brandColor),
         colorScheme: ColorScheme.fromSwatch(
-          accentColor: const Color(0xFF13B9FF),
+          accentColor: brandColor,
         ),
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
