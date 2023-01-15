@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timeninja/l10n/l10n.dart';
 
 enum NavigationDestinationItems { home, weekview, settings }
 
@@ -25,22 +26,24 @@ extension NavigationDestinationItemsExtension on NavigationDestinationItems {
     }
   }
 
-  String get label {
+  String _label(AppLocalizations l10n) {
     switch (this) {
       case NavigationDestinationItems.home:
-        return 'Home';
+        return l10n.navBarHome;
       case NavigationDestinationItems.weekview:
-        return 'Week View';
+        return l10n.navBarWeekView;
       case NavigationDestinationItems.settings:
-        return 'Settings';
+        return l10n.navBarSettings;
     }
   }
 
-  NavigationDestination get destination {
+  NavigationDestination buildDestination(BuildContext context) {
+    final l10n = context.l10n;
+
     return NavigationDestination(
       icon: Icon(outlineIcon),
       selectedIcon: Icon(icon),
-      label: label,
+      label: _label(l10n),
     );
   }
 }

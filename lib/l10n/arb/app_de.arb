@@ -1,7 +1,15 @@
 {
-    "@@locale": "de",
-    "counterAppBarTitle": "Zähler",
-    "@counterAppBarTitle": {
-        "description": "Der Text, der in der Appbar angezeigt wird, wenn der Benutzer auf die Zähler-Seite navigiert."
-    }
+  "@@locale": "de",
+  "navBarHome": "Home",
+  "@navBarHome": {
+    "description": "Der Text, der in der Navigationsleiste für die Startseite angezeigt wird."
+  },
+  "navBarWeekView": "Wochenansicht",
+  "@navBarWeekView": {
+    "description": "Der Text, der in der Navigationsleiste für die Wochenansicht angezeigt wird."
+  },
+  "navBarSettings": "Einstellungen",
+  "@navBarSettings": {
+    "description": "Der Text, der in der Navigationsleiste für die Einstellungen angezeigt wird."
+  }
 }

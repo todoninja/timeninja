@@ -33,7 +33,7 @@ class _EntryScaffoldState extends State<EntryScaffold> {
           },
           destinations: [
             for (final item in NavigationDestinationItems.values)
-              item.destination,
+              item.buildDestination(context),
           ],
         ),
       ),
