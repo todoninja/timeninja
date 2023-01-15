@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timeninja/counter/counter.dart';
+import 'package:timeninja/entry_scaffold/view/entry_scaffold.dart';
 import 'package:timeninja/keys.dart';
 import 'package:timeninja/l10n/l10n.dart';
 
@@ -11,14 +11,16 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        appBarTheme: const AppBarTheme(color: brandColor),
-        colorScheme: ColorScheme.fromSwatch(
-          accentColor: brandColor,
-        ),
+        colorSchemeSeed: brandColor,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        colorSchemeSeed: brandColor,
+        useMaterial3: true,
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const EntryScaffold(),
     );
   }
 }
