@@ -2,16 +2,13 @@ import 'package:flutter/material.dart';
 
 enum NavigationDestinationItems { home, weekview, settings }
 
-
-// TODO: Change weekview icon to a better one
-
 extension NavigationDestinationItemsExtension on NavigationDestinationItems {
   IconData get icon {
     switch (this) {
       case NavigationDestinationItems.home:
         return Icons.home;
       case NavigationDestinationItems.weekview:
-        return Icons.calendar_view_week;
+        return Icons.view_week;
       case NavigationDestinationItems.settings:
         return Icons.settings;
     }
@@ -22,7 +19,7 @@ extension NavigationDestinationItemsExtension on NavigationDestinationItems {
       case NavigationDestinationItems.home:
         return Icons.home_outlined;
       case NavigationDestinationItems.weekview:
-        return Icons.calendar_view_week_outlined;
+        return Icons.view_week_outlined;
       case NavigationDestinationItems.settings:
         return Icons.settings_outlined;
     }

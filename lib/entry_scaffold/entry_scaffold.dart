@@ -1,1 +1,1 @@
-import 'view/entry_scaffold.dart';
+export 'view/entry_scaffold.dart';
