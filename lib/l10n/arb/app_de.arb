@@ -1,0 +1,7 @@
+{
+    "@@locale": "de",
+    "counterAppBarTitle": "Zähler",
+    "@counterAppBarTitle": {
+        "description": "Der Text, der in der Appbar angezeigt wird, wenn der Benutzer auf die Zähler-Seite navigiert."
+    }
+}
