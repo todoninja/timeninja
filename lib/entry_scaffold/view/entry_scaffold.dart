@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timeninja/create_tracking/create_tracking.dart';
 import 'package:timeninja/navigation_destination_items.dart';
 
 class EntryScaffold extends StatefulWidget {
@@ -12,7 +13,7 @@ class _EntryScaffoldState extends State<EntryScaffold> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
-    Center(child: Text('1')),
+    CreateTrackingPage(),
     Center(child: Text('2')),
     Center(child: Text('3')),
   ];
