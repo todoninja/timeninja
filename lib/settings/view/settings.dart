@@ -9,6 +9,7 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
+// TODO: Add real settings
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
