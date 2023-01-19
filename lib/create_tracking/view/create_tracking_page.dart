@@ -1,8 +1,7 @@
 import 'package:drift/drift.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:timeninja/data/database.dart';
 import 'package:provider/provider.dart';
+import 'package:timeninja/data/database.dart';
 
 class CreateTrackingPage extends StatelessWidget {
   const CreateTrackingPage({super.key});
@@ -19,7 +18,7 @@ class CreateTrackingPage extends StatelessWidget {
             onPressed: () async {
               final db = Provider.of<AppDb>(context, listen: false);
 
-              final timeblock = await db.into(db.timeblock).insert(
+              await db.into(db.timeblock).insert(
                     TimeblockCompanion(
                       start: Value(DateTime.now()),
                       end: Value(DateTime.now()),
