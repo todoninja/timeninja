@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:timeninja/create_tracking/create_tracking.dart';
 import 'package:timeninja/navigation_destination_items.dart';
 import 'package:timeninja/settings/settings.dart';
+import 'package:timeninja/week_view/view/week_view.dart';
 
 class EntryScaffold extends StatefulWidget {
   const EntryScaffold({super.key});
@@ -15,7 +16,7 @@ class _EntryScaffoldState extends State<EntryScaffold> {
 
   final List<Widget> _pages = const [
     CreateTrackingPage(),
-    Center(child: Text('2')),
+    WeekViewPage(),
     SettingsPage(),
   ];
 
