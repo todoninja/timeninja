@@ -9,7 +9,7 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-// TODO: Add real settings
+// TODO(jonasrichardrichter): #1 Add real settings https://github.com/todoninja/timeninja/issues/1
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
