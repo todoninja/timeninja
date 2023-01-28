@@ -22,23 +22,18 @@ class _EntryScaffoldState extends State<EntryScaffold> {
 
   @override
   Widget build(BuildContext context) {
-    final themeData = Theme.of(context);
-
     return Scaffold(
-      bottomNavigationBar: Theme(
-        data: themeData.copyWith(splashFactory: NoSplash.splashFactory),
-        child: NavigationBar(
-          selectedIndex: _selectedIndex,
-          onDestinationSelected: (value) {
-            setState(() {
-              _selectedIndex = value;
-            });
-          },
-          destinations: [
-            for (final item in NavigationDestinationItems.values)
-              item.buildDestination(context),
-          ],
-        ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _selectedIndex,
+        onDestinationSelected: (value) {
+          setState(() {
+            _selectedIndex = value;
+          });
+        },
+        destinations: [
+          for (final item in NavigationDestinationItems.values)
+            item.buildDestination(context),
+        ],
       ),
       body: IndexedStack(
         index: _selectedIndex,
