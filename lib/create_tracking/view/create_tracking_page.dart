@@ -1,6 +1,7 @@
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:timeninja/create_tracking/components/active_tracking_card.dart';
 import 'package:timeninja/data/database.dart';
 import 'package:timeninja/keys.dart';
 import 'package:timeninja/l10n/l10n.dart';
@@ -26,7 +27,7 @@ class CreateTrackingPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               FloatingActionButton(
-                mini: true,
+                backgroundColor: theme.colorScheme.tertiaryContainer,
                 onPressed: () async {
                   final db = Provider.of<AppDb>(context, listen: false);
 
@@ -40,52 +41,22 @@ class CreateTrackingPage extends StatelessWidget {
                 },
                 child: const Icon(Icons.add),
               ),
-              FloatingActionButton(
-                onPressed: () {},
-                child: const Icon(Icons.play_arrow),
+              const Padding(padding: EdgeInsets.only(top: largeSpacing)),
+              SizedBox(
+                height: 96,
+                width: 96,
+                child: FittedBox(
+                  child: FloatingActionButton(
+                    onPressed: () {},
+                    child: const Icon(Icons.play_arrow),
+                  ),
+                ),
               ),
             ],
           ),
           body: Column(
             children: [
-              // Padding(
-              //   padding: const EdgeInsets.only(
-              //     left: largeSpacing,
-              //     right: largeSpacing,
-              //   ),
-              //   child: Text(
-              //     "🌤️ Today isn't a work day. Enjoy your free time!",
-              //     textAlign: TextAlign.start,
-              //     style: theme.textTheme.headlineMedium
-              //         ?.copyWith(fontWeight: FontWeight.bold),
-              //   ),
-              // ),
-              Padding(
-                padding: const EdgeInsets.all(mediumSpacing),
-                child: Card(
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  child: Column(
-                    children: [
-                      ListTile(
-                        title: const Text(
-                          '📝 Writing a blog post',
-                        ),
-                        subtitle: Text(
-                          'Started 10:00am',
-                          style: theme.textTheme.labelLarge
-                              ?.copyWith(color: theme.colorScheme.secondary),
-                        ),
-                        trailing: const Text(
-                          '1h 30m',
-                        ),
-                      ),
-                      const LinearProgressIndicator(
-                        value: 1,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const ActiveTrackingCard(),
 
               Expanded(child: _buildTimeblockList(context)),
             ],

@@ -43,7 +43,7 @@ class _WeekViewPageState extends State<WeekViewPage> {
           const Padding(padding: EdgeInsets.all(smallSpacing)),
           Text(
             'Monday, 2. January 2023',
-            style: theme.textTheme.caption,
+            style: theme.textTheme.bodySmall,
             textAlign: TextAlign.center,
           ),
           const Padding(padding: EdgeInsets.all(smallSpacing)),
