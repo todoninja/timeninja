@@ -9,24 +9,24 @@ environment:
 
 dependencies:
   bloc: ^8.1.0
-  drift: ^2.4.2
+  drift: ^2.5.0
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
   flutter_localizations:
     sdk: flutter
   intl: ^0.17.0
-  package_info_plus: ^3.0.0
+  package_info_plus: ^3.0.2
   path: ^1.8.2
-  path_provider: ^2.0.11
+  path_provider: ^2.0.12
   provider: ^6.0.5
   shared_preferences: ^2.0.17
   sqlite3_flutter_libs: ^0.5.12
 
 dev_dependencies:
   bloc_test: ^9.1.0
-  build_runner: ^2.3.3
-  drift_dev: ^2.4.1
+  build_runner: ^2.3.0
+  drift_dev: ^2.5.1
   flutter_test:
     sdk: flutter
   mocktail: ^0.3.0
@@ -35,7 +35,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
-
 # dependency_overrides:
 #   # Flutter's test packages don't support the latest analyzer yet.
 #   test_api: ^0.4.16
