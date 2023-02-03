@@ -9,7 +9,7 @@ part 'database.g.dart';
 class Timeblock extends Table {
   IntColumn get id => integer().autoIncrement()();
   DateTimeColumn get start => dateTime()();
-  DateTimeColumn get end => dateTime()();
+  DateTimeColumn? get end => dateTime()();
   TextColumn get note => text()();
 }
 

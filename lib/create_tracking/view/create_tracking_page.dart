@@ -1,5 +1,6 @@
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:timeninja/create_tracking/components/active_tracking_card.dart';
 import 'package:timeninja/data/database.dart';
@@ -47,7 +48,16 @@ class CreateTrackingPage extends StatelessWidget {
                 width: 96,
                 child: FittedBox(
                   child: FloatingActionButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      final db = Provider.of<AppDb>(context, listen: false);
+
+                      await db.into(db.timeblock).insert(
+                            TimeblockCompanion(
+                              start: drift.Value(DateTime.now()),
+                              note: const drift.Value('Test'),
+                            ),
+                          );
+                    },
                     child: const Icon(Icons.play_arrow),
                   ),
                 ),
@@ -57,7 +67,6 @@ class CreateTrackingPage extends StatelessWidget {
           body: Column(
             children: [
               const ActiveTrackingCard(),
-
               Expanded(child: _buildTimeblockList(context)),
             ],
           ),
@@ -86,12 +95,15 @@ StreamBuilder<List<TimeblockData>> _buildTimeblockList(BuildContext context) {
 }
 
 Widget _buildListItem(TimeblockData itemTask, AppDb database) {
+  final dateFormat = DateFormat.Hm();
+
   return ListTile(
     title: Text(itemTask.note),
-    subtitle: Text(itemTask.start.toString() + itemTask.end.toString()),
-    trailing: IconButton(
-      icon: const Icon(Icons.info_outline),
-      onPressed: () {},
+    subtitle: Text(
+      '${dateFormat.format(itemTask.start)} - ${dateFormat.format(itemTask.end)}',
+    ),
+    trailing: Text(
+      '${itemTask.end.difference(itemTask.start).inMinutes}m',
     ),
   );
 }

@@ -20,6 +20,7 @@ dependencies:
   path: ^1.8.2
   path_provider: ^2.0.11
   provider: ^6.0.5
+  shared_preferences: ^2.0.17
   sqlite3_flutter_libs: ^0.5.12
 
 dev_dependencies:
@@ -35,6 +36,6 @@ flutter:
   uses-material-design: true
   generate: true
 
-dependency_overrides:
-  # Flutter's test packages don't support the latest analyzer yet.
-  test_api: ^0.4.16
+# dependency_overrides:
+#   # Flutter's test packages don't support the latest analyzer yet.
+#   test_api: ^0.4.16
