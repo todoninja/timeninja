@@ -100,7 +100,8 @@ Widget _buildListItem(TimeblockData itemTask, AppDb database) {
   return ListTile(
     title: Text(itemTask.note),
     subtitle: Text(
-      '${dateFormat.format(itemTask.start)} - ${dateFormat.format(itemTask.end)}',
+      '${dateFormat.format(itemTask.start)} - '
+      '${dateFormat.format(itemTask.end)}',
     ),
     trailing: Text(
       '${itemTask.end.difference(itemTask.start).inMinutes}m',

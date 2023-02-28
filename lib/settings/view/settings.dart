@@ -84,7 +84,8 @@ class _SettingsPageState extends State<SettingsPage> {
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 return Text(
-                  'Version ${snapshot.data!.version} (${snapshot.data!.buildNumber})',
+                  'Version ${snapshot.data!.version} '
+                  '(${snapshot.data!.buildNumber})',
                   style: theme.textTheme.bodySmall,
                   textAlign: TextAlign.center,
                 );
