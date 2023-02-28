@@ -20,7 +20,7 @@ dependencies:
   path: ^1.8.2
   path_provider: ^2.0.12
   provider: ^6.0.5
-  shared_preferences: ^2.0.17
+  shared_preferences: ^2.0.18
   sqlite3_flutter_libs: ^0.5.12
 
 dev_dependencies:
