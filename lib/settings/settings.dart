@@ -1,7 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
-export 'view/settings.dart';
-
 class Settings {
   static const String _keyHoursPerWeek = 'hoursPerWeek';
   static const String _keyTaskMode = 'taskMode';

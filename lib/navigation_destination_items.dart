@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timeninja/l10n/l10n.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 enum NavigationDestinationItems { home, weekview, settings }
 
@@ -38,7 +38,7 @@ extension NavigationDestinationItemsExtension on NavigationDestinationItems {
   }
 
   NavigationDestination buildDestination(BuildContext context) {
-    final l10n = context.l10n;
+    final l10n = AppLocalizations.of(context)!;
 
     return NavigationDestination(
       icon: Icon(outlineIcon),
