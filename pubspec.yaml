@@ -39,7 +39,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
-  package_info_plus: ^3.0.3
+  package_info_plus: ^3.1.1
   shared_preferences: ^2.0.18
   sqlite3_flutter_libs: ^0.5.13
   path: ^1.8.2
