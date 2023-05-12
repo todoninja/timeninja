@@ -41,7 +41,7 @@ dependencies:
   intl: any
   package_info_plus: ^3.0.3
   shared_preferences: ^2.0.18
-  sqlite3_flutter_libs: ^0.5.13
+  sqlite3_flutter_libs: ^0.5.15
   path: ^1.8.2
   path_provider: ^2.0.13
   provider: ^6.0.5
